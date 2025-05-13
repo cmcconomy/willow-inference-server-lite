@@ -1,0 +1,10 @@
+services:
+  wis:
+    image: willow-inference-server-lite
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wis
+    restart: always
+    ports:
+      - "8000:8000"

@@ -1,0 +1,11 @@
+[project]
+name = "willow-inference-server-lite"
+version = "0.1.0"
+description = "A drop-in replacement for Willow Inference Server"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "faster-whisper>=1.1.1",
+    "httpx>=0.28.1",
+]
