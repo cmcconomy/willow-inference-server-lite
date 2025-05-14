@@ -8,4 +8,12 @@ dependencies = [
     "fastapi[standard]>=0.115.12",
     "faster-whisper>=1.1.1",
     "httpx>=0.28.1",
+    "openai>=1.78.1",
+    "pydantic>=2.11.4",
+    "pydantic-settings>=2.9.1",
 ]
+
+# Required for 'editable' install of local project
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
