@@ -1,10 +1,10 @@
 #
 name: Create and publish a Docker image
 
-# Configures this workflow to run every time a change is pushed to the branch called `release`.
+# Configures this workflow to run every time a tag is pushed with the format `v*.*.*`. This is a common convention for versioning in software development, where `v` indicates a version number followed by major, minor, and patch numbers.
 on:
   push:
-    branches: ['release']
+    tags: [ 'v*.*.*' ]
 
 # Defines two custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
 env:
