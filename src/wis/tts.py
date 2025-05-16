@@ -29,8 +29,8 @@ async def to_speech(text: str, config: TtsConfig) -> Response:
                 "q": text[0:200],
             }
             async with httpx.AsyncClient() as client:
-                resp = await client.get(url, params)
-                result = Response(await resp.content, media_type="audio/mpeg")
+                resp = await client.get(url, params=params)
+                result = Response(resp.content, media_type="audio/mpeg")
 
         case TtsProvider.OpenAI:
             if not config.tts_openai_baseurl:
